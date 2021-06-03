@@ -1,0 +1,34 @@
+<div class="col-md-8 mx-auto mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3>New Product to Add <i class="fas fa-shipping-fast"></i></h3>
+        </div>
+        <div class="card-body">
+            <form action="/products/new-product" method="POST">
+               <div class="form-group">
+                   <label for="title">Product Title</label>
+                    <input type="text" name="title" class="form-control" placeholder="Nike Dunks" autofocus >
+               </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                   <input type="text" name="category" class="form-control" placeholder="Shoes" autofocus>
+               </div>
+               <div class="form-group">
+                   <label for="price">Price</label>
+                   <input type="text" name="price" class="form-control" placeholder="34355$" autofocus>
+               </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                   <input type="text" name="state" class="form-control" placeholder="Used or New" autofocus>
+               </div>
+               <div class="form-group">
+                   <label for="description">Description</label>
+                   <textarea name="description" placeholder="Description" class="form-control"></textarea>
+               </div>
+               <div class="form-group">
+                   <button class="btn btn-primary btn-block">Save Product</button>
+               </div>
+            </form>
+        </div>
+    </div>
+</div>

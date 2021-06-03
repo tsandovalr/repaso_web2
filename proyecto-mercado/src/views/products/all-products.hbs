@@ -1,0 +1,34 @@
+<div class="row row-cols-1 row-cols-md-3 g-4 ">
+    {{#each products}}
+    <div class="col-md-4 mt-5 mb-5">
+        <div class="card h-100 ">
+            
+            <div class="card-body">
+                <h4 class="card-title d-flex justify-content-between align-items-center">
+                    {{title}} <a href="/products/edit/{{_id}}"><i class="fas fa-user-edit"></i></a>
+                    </h4>
+                <p>Category: {{category}}</p>
+                <p>Price: {{price}} bsf <i class="fas fa-money-bill-alt"></i> </p>
+                <p>State: {{state}}</p>
+                <P>Description: {{description}}</P>
+                <div class="card-footer">
+                <form action="/products/delete/{{_id}}?_method=DELETE" method="POST">
+                <button type="submit" class="btn btn-outline-danger btn-sm">
+                    Delete <i class="fas fa-trash-alt"></i>
+                </button>
+                </form>
+                </div>
+            </div>
+         </div>
+      </div>
+
+    {{/each}}
+    <div class="card mx-auto mt-5 mb-5">
+        <div class="card-body">
+            <p class="lead">Feeling like selling some product?</p>
+            <a href="/products/add" class="btn btn-success btn-block">Sell one!</a>
+
+        </div>
+
+    </div>
+</div>
